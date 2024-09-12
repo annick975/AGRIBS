@@ -1,4 +1,4 @@
-/* Container for the header */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -6,6 +6,7 @@
   padding: 10px 40px;
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
 }
 
 /* Logo section styling */
@@ -30,14 +31,26 @@
 .nav-links {
   display: flex;
   gap: 30px;
+  font-family: "Lora", serif;
 }
 
 .nav-links a {
   text-decoration: none;
   font-size: 18px;
-  color: #000080; /* Navy blue color */
+  color: #072B1E;
+  font-weight: 600;
+  padding: 0.5rem 1rem; 
+  border: none;
+  border-radius: 0.25rem; 
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  background-color: #072B1E;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem; 
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 1s ease;
 }

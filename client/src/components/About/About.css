@@ -1,53 +1,92 @@
-
-/* AboutAgribs.css */
-.about-agribs {
-  background-color: #006400;
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+.about-agribs-container {
+  background: linear-gradient(to bottom right, #003628, #013d2d);
   color: white;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
+  padding: 40px;
+  font-family: "Lora", serif;
 }
 
-.about-section h2, .reviews-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.about-section {
+  text-align: left;
+  margin-bottom: 40px;
 }
 
-.highlight {
-  color: #7FFF00;
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.agribs-highlight {
+  color: #33cc33;
 }
 
-.about-section p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  flex: 1;
-  padding-right: 2rem;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.farmer-image, .vegetables-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.vegetables-image {
-  width: 100px;
-  height: 100px;
-  margin-right: 3rem;
+.about-text {
+  font-size: 1.1rem;
+  line-height: 2.5;
+  max-width: 950px;
+  margin: 0;
+  text-align: left;
 }
 
 .reviews-section {
-  margin-top
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-role {
+  font-style: italic;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  quotes: "“" "”" "‘" "’";
+}
+
+.review-text::before {
+  content: open-quote;
+}
+
+.review-text::after {
+  content: close-quote;
+}
+
+.review-rating {
+  color: #ffd700;
+  font-size: 1.5rem;
+}

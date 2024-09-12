@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.css"
+import "./home.css";
 
 const Home: React.FC = () => {
   return (
@@ -18,4 +18,5 @@ const Home: React.FC = () => {
     </div>
   );
 };
+
 export default Home;

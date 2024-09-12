@@ -1,46 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 .landing-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: white;
-  color: #1a202c;
+  align-items: flex-start;
+ font-family: "Lora", serif;
+ font-size: larger;
+  min-height: 70vh;
+  background-color: rgb(247, 247, 247);
   padding: 1rem;
+  line-height: 2.5;
 }
 
 .content {
   max-width: 42rem;
-  text-align: center;
+  text-align: left;
+  margin-left: 0;
+  
 }
 
 .main-title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .highlight {
-  color: #25855a;
+  color: #037a07;
 }
 
 .subtitle {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #25855a;
-  margin-bottom: 1.5rem;
+  color: #08AA0E;
+  margin-bottom: 2rem;
 }
 
 .description {
   font-size: 1.125rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  color: #1a202c;
 }
 
 .cta-button {
-  background-color: #1a202c;
+  background-color: #072B1E;
   color: white;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem; 
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -48,5 +53,5 @@
 }
 
 .cta-button:hover {
-  background-color: #2d3748;
+  background-color: #025014;
 }
