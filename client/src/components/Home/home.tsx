@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <h2 className="subtitle">Access Needs</h2>
         <p className="description">
           Easily Connect with Buyers Through AGRIBS, Maximize Your Profits and
-          Minimize Market Challenges
+          Minimize Market Challenges.
         </p>
         <button className="cta-button">Join Our Community</button>
       </div>

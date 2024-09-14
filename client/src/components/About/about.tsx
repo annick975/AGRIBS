@@ -57,7 +57,7 @@ const About: React.FC = () => {
               <p>Quick and reliable!</p>
               <p>
                 I found farmers effortlessly and received fresh produce
-                delivered on time, straight from their farms to my hands.
+                delivered on time, straight from their farms to my hands. I 'm really impresed!'
               </p>
             </blockquote>
             <div className="review-rating">★★★★★</div>

@@ -10,12 +10,10 @@
 }
 
 .offers-content {
-  max-width: 900px;
+  
   z-index: 1;
   min-height: 70vh;
   padding-left: 3vh;
-  
-  
 }
 
 .highlight {
@@ -23,18 +21,19 @@
 }
 
 .offers-title {
-  font-size: 2.3rem;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
   font-weight: bold;
   color: #25855a;
-  margin-bottom: 1.5rem;
 }
 
 .offers-description {
-  font-size: 1.6rem;
   color: #010010;
+  max-width: 80rem;
   margin-bottom: 2rem;
-  line-height: 2.5;
   font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2;
 }
 
 .learn-more-button {

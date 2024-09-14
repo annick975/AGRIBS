@@ -9,7 +9,7 @@
   position: sticky;
 }
 
-/* Logo section styling */
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -21,13 +21,13 @@
 }
 
 .logo-text {
-  font-size: 24px;
+  font-size: 2.25rem;
   font-weight: bold;
-  color: #32CD32; /* Green color for AGRIBS */
+  color: #32CD32; 
   margin-left: 10px;
 }
 
-/* Navigation links styling */
+
 .nav-links {
   display: flex;
   gap: 30px;
@@ -36,7 +36,7 @@
 
 .nav-links a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.28rem;
   color: #072B1E;
   font-weight: 600;
   padding: 0.5rem 1rem; 
