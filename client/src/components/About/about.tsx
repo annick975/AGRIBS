@@ -22,6 +22,15 @@ const About: React.FC = () => {
         </p>
       </section>
 
+      <div className="images-container">
+       <div className="image image-1">
+          <img src={jake} alt="Farmer holding vegetables" />
+        </div>
+        <div className="image image-2">
+          <img src={ruth} alt="Basket of fresh produce" />
+        </div>
+      </div>
+
       <section className="reviews-section">
         <h2 className="reviews-title">Customer Reviews</h2>
         <div className="reviews-container">

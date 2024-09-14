@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
 .about-agribs-container {
   background: linear-gradient(to bottom right, #003628, #013d2d);
   color: white;
   padding: 40px;
   font-family: "Lora", serif;
+  position: relative;
 }
 
 .about-section {
   text-align: left;
   margin-bottom: 40px;
+  position: relative; 
+  z-index: 1;
 }
 
 .about-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
@@ -21,27 +25,64 @@
 }
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 2.5;
-  max-width: 950px;
+  font-size: 1.3rem;
+  line-height: 2;
+  max-width: 80rem;
   margin: 0;
   text-align: left;
 }
+
+.images-container {
+  position: absolute;
+  top: 5rem; 
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2; 
+}
+
+.image {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-1{
+  margin-right: 5rem;
+}
+
+.image-2{
+  margin-right: 15rem;
+}
+
+
 
 .reviews-section {
   text-align: center;
 }
 
 .reviews-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  margin-top: 13rem;
 }
 
 .reviews-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 10rem;
   flex-wrap: wrap;
+  margin-top: 20px; 
 }
 
 .review-card {
@@ -55,25 +96,27 @@
 }
 
 .review-avatar {
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .review-name {
   font-weight: bold;
+  font-size: 1.3rem;
   margin-bottom: 5px;
 }
 
 .review-role {
   font-style: italic;
+  font-size: 1.1rem;
   color: gray;
   margin-bottom: 15px;
 }
 
 .review-text {
-  font-size: 1rem;
+  font-size: 1.21rem;
   margin-bottom: 15px;
   quotes: "“" "”" "‘" "’";
 }
@@ -88,5 +131,5 @@
 
 .review-rating {
   color: #ffd700;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
 }

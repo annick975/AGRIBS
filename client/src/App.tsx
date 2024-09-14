@@ -1,6 +1,7 @@
 import Header from "./components/Header/header";
 import Home from "./components/Home/home";
 import About from "./components/About/about";
+import Offers from "./components/Offers/Offers";
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
       </header>
       <Home />
       <About />
+      <Offers />
     </>
   );
 }
