@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form-container {
+  width: 35%;
+  border: 1px solid #E0E0E0;
+  padding: 50px;
+  border-radius: 20px;
+  margin-left: 10rem;
+  font-family: "Lora", serif;
+
+}
+
+.question-text {
+  color: #013d2d;
+  font-size: 1.4rem;
+}
+
+.form-title {
+  color: #013d2d;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input {
+  width: 48%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid #E0E0E0;
+}
+
+.form-textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background-color: #004225;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+.contact-info {
+  width: 45%;
+  padding: 20px;
+}
+
+.contact-info h2 {
+  color: #2E3A8C;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info strong {
+  font-weight: bold;
+}
