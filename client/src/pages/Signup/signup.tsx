@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import '../App.css';
-import logo from "../assets/Logo.png";
+import React, { useState } from "react";
+import logo from "../../assets/Logo.png";
 
-const SignupForm: React.FC = () => {
+const Signup: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -31,7 +30,7 @@ const SignupForm: React.FC = () => {
         </div>
         <div className="input-group password-input">
           <input
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             placeholder="Password *"
             required
           />
@@ -46,7 +45,7 @@ const SignupForm: React.FC = () => {
         </div>
         <div className="input-group password-input">
           <input
-            type={showConfirmPassword ? 'text' : 'password'}
+            type={showConfirmPassword ? "text" : "password"}
             placeholder="Confirm Password *"
             required
           />
@@ -59,7 +58,9 @@ const SignupForm: React.FC = () => {
             &#128065;
           </button>
         </div>
-        <button type="submit" className="signup-button">Sign Up</button>
+        <button type="submit" className="signup-button">
+          Sign Up
+        </button>
       </form>
       <p className="login-text">
         Already have an account? <a href="/login">log in</a>
@@ -68,4 +69,4 @@ const SignupForm: React.FC = () => {
   );
 };
 
-export default SignupForm;
+export default Signup;
