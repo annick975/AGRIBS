@@ -33,8 +33,8 @@ const Footer = () => {
     { name: "Contact Us", sectionId: "contact" },
     { name: "Our Offers", sectionId: "offers" },
     { name: "About Us", sectionId: "about" },
-    { name: "Sign up", path: "/signup" },
-    { name: "Login", path: "/login" },
+    { name: "Sign up", path: "" },
+    { name: "Login", path: "" },
   ];
 
   const posts: BlogPost[] = [

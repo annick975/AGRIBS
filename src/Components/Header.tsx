@@ -12,20 +12,20 @@ const Header = () => {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Offers", href: "#offers" },
+    { name: "FAQs", href: "#faq" },
     { name: "Contact us", href: "#contact" },
-    { name: "Login", href: "/signup" },
+    { name: "Login", href: "#" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      // Get all sections
+  
       const sections = navItems
         .map((item) => item.href.replace("#", ""))
         .filter(Boolean);
 
-      // Find which section is currently in view
       const currentPosition = window.scrollY + window.innerHeight / 3;
 
       let activeSection = "";

@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-[#004d36] via-[#013d2d] to-[#003628] text-white font-lora min-h-screen overflow-hidden">
+    <div className="relative bg-gradient-to-br from-[#004d36] via-[#013d2d] to-[#003628] text-white font-lora min-h-screen overflow-hidden" id="faq">
       <div className="absolute inset-0 overflow-hidden">
         <svg
           className="absolute top-0 right-0 w-1/3 h-1/3 text-green-500/5"
