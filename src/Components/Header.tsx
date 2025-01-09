@@ -14,7 +14,7 @@ const Header = () => {
     { name: "Offers", href: "#offers" },
     { name: "FAQs", href: "#faq" },
     { name: "Contact us", href: "#contact" },
-    { name: "Login", href: "#" },
+    { name: "Login", href: "" },
   ];
 
   useEffect(() => {
