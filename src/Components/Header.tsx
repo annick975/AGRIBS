@@ -2,19 +2,11 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("");
+  const [currentSection, setCurrentSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -23,6 +15,54 @@ const Header = () => {
     { name: "Contact us", href: "#contact" },
     { name: "Login", href: "/signup" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      // Get all sections
+      const sections = navItems
+        .map((item) => item.href.replace("#", ""))
+        .filter(Boolean);
+
+      // Find which section is currently in view
+      const currentPosition = window.scrollY + window.innerHeight / 3;
+
+      let activeSection = "";
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { top, bottom } = element.getBoundingClientRect();
+          const elementTop = top + window.scrollY;
+          const elementBottom = bottom + window.scrollY;
+
+          if (
+            currentPosition >= elementTop &&
+            currentPosition <= elementBottom
+          ) {
+            activeSection = section;
+            break;
+          }
+        }
+      }
+
+    
+      if (window.scrollY < 100) {
+        activeSection = "";
+      }
+
+      setCurrentSection(activeSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (href: string) => {
+    if (href === "#") return currentSection === "";
+    return href === `#${currentSection}`;
+  };
 
   return (
     <header
@@ -54,7 +94,6 @@ const Header = () => {
             </span>
           </motion.div>
 
-          
           <nav className="hidden md:flex gap-2 font-lora">
             {navItems.map((item, index) => (
               <motion.a
@@ -69,7 +108,7 @@ const Header = () => {
               >
                 <span
                   className={`relative z-10 ${
-                    activeItem === item.name
+                    activeItem === item.name || isActive(item.href)
                       ? "text-[#004d36]"
                       : "text-gray-100"
                   }`}
@@ -79,8 +118,10 @@ const Header = () => {
                 <motion.div
                   initial={false}
                   animate={{
-                    opacity: activeItem === item.name ? 1 : 0,
-                    scale: activeItem === item.name ? 1 : 0.9,
+                    opacity:
+                      activeItem === item.name || isActive(item.href) ? 1 : 0,
+                    scale:
+                      activeItem === item.name || isActive(item.href) ? 1 : 0.9,
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-[#4ade80] to-green-300 rounded-lg -z-0"
                 />
@@ -88,7 +129,6 @@ const Header = () => {
             ))}
           </nav>
 
-          
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -105,7 +145,6 @@ const Header = () => {
         </div>
       </div>
 
-  
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -123,7 +162,11 @@ const Header = () => {
                     transition={{ delay: index * 0.1 }}
                     key={item.name}
                     href={item.href}
-                    className="px-4 py-3 text-lg font-semibold text-gray-100 rounded-lg hover:bg-[#4ade80]/10 transition-colors duration-300"
+                    className={`px-4 py-3 text-lg font-semibold rounded-lg transition-colors duration-300 ${
+                      isActive(item.href)
+                        ? "bg-[#4ade80] text-[#004d36]"
+                        : "text-gray-100 hover:bg-[#4ade80]/10"
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
