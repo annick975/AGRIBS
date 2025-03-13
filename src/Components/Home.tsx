@@ -1,31 +1,28 @@
 import { motion } from "framer-motion";
 
+import jake from "../assets/farmer1.jpeg";
+import ruth from "../assets/farmer2.jpg";
+import modern from "../assets/modern.jpeg"
+
+
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#004d36] via-[#013d2d] to-[#003628] overflow-hidden font-lora" id="home">
-
+    <div
+      className="min-h-screen bg-gradient-to-b from-[#004d36] via-[#013d2d] to-[#003628] overflow-hidden font-lora"
+      id="home"
+    >
+      {/* Background elements */}
       <div className="absolute inset-0">
-        
-        <svg
-          className="absolute top-0 right-0 w-2/3 h-2/3 text-green-900/20"
-          viewBox="0 0 200 200"
-        >
-          <path
-            d="M 100,0 C 150,50 150,150 100,200 C 50,150 50,50 100,0"
-            fill="currentColor"
-          />
-        </svg>
-
-       
+        {/* Dot pattern background overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-20" />
 
-    
+        {/* Gradient accent */}
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-green-500/20 to-transparent rounded-full filter blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
-          
+          {/* Text content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -107,165 +104,62 @@ const Home = () => {
             className="flex-1 relative w-full max-w-xl lg:max-w-none"
           >
             <div className="relative w-full aspect-square">
+              {/* Image container with glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-300/10 rounded-full blur-3xl" />
-              <svg className="relative w-full h-full" viewBox="0 0 400 400">
-                <defs>
-                  <radialGradient id="field-gradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#4ade80" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#4ade80" stopOpacity="0.1" />
-                  </radialGradient>
-                  <pattern
-                    id="field-pattern"
-                    x="0"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path
-                      d="M0,10 Q10,0 20,10"
-                      stroke="#4ade80"
-                      strokeWidth="0.5"
-                      fill="none"
-                      opacity="0.3"
+
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Main circular frame */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.8 }}
+                  className="relative w-4/5 aspect-square rounded-full overflow-hidden border-4 border-green-400/30"
+                >
+                  <img
+                    src={modern}
+                    alt="Aerial view of modern farm"
+                    className="absolute w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#003628]/60 to-transparent" />
+                </motion.div>
+
+                {/* Small floating elements */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                  className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40"
+                >
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-green-400/40 shadow-lg shadow-green-400/20">
+                    <img
+                      src={jake}
+                      alt="Wheat close-up"
+                      className="absolute w-full h-full object-cover"
                     />
-                  </pattern>
-                </defs>
+                  </div>
+                </motion.div>
 
-            
-                <circle cx="200" cy="200" r="180" fill="url(#field-gradient)" />
-                <circle
-                  cx="200"
-                  cy="200"
-                  r="180"
-                  fill="url(#field-pattern)"
-                  fillOpacity="0.3"
-                />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9, duration: 0.6 }}
+                  className="absolute bottom-10 left-0 w-24 h-24 md:w-32 md:h-32"
+                >
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-green-400/40 shadow-lg shadow-green-400/20">
+                    <img
+                      src={ruth}
+                      alt="Farmer using technology"
+                      className="absolute w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
 
-                
-                <g transform="translate(100, 100)">
-                
-                  {[0, 40, 80].map((x, i) => (
-                    <motion.g
-                      key={i}
-                      transform={`translate(${x}, ${i * 10})`}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.5 + i * 0.2, duration: 0.8 }}
-                    >
-                      <rect
-                        x="8"
-                        y="30"
-                        width="8"
-                        height="20"
-                        fill="#4ade80"
-                        opacity="0.8"
-                      />
-                      <path
-                        d="M0,30 L12,-5 L24,30"
-                        fill="#4ade80"
-                        opacity="0.6"
-                      />
-                      <path
-                        d="M2,20 L12,-15 L22,20"
-                        fill="#4ade80"
-                        opacity="0.7"
-                      />
-                      <path
-                        d="M4,10 L12,-25 L20,10"
-                        fill="#4ade80"
-                        opacity="0.8"
-                      />
-                    </motion.g>
-                  ))}
-
-                  
-                  {[...Array(8)].map((_, i) => (
-                    <motion.g
-                      key={`crop-${i}`}
-                      transform={`translate(${i * 25}, 150)`}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.7 + i * 0.1, duration: 0.5 }}
-                    >
-                      <path
-                        d="M0,0 Q5,-10 10,0"
-                        stroke="#4ade80"
-                        strokeWidth="2"
-                        fill="none"
-                        opacity="0.8"
-                      >
-                        <animate
-                          attributeName="d"
-                          values="M0,0 Q5,-10 10,0;M0,0 Q5,-8 10,0;M0,0 Q5,-10 10,0"
-                          dur={`${2 + i * 0.5}s`}
-                          repeatCount="indefinite"
-                        />
-                      </path>
-                      <circle
-                        cx="5"
-                        cy="0"
-                        r="2"
-                        fill="#4ade80"
-                        opacity="0.8"
-                      />
-                    </motion.g>
-                  ))}
-
-                  <motion.g
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                  >
-                    <circle
-                      cx="220"
-                      cy="-20"
-                      r="25"
-                      fill="#4ade80"
-                      opacity="0.8"
-                    >
-                      <animate
-                        attributeName="r"
-                        values="25;27;25"
-                        dur="3s"
-                        repeatCount="indefinite"
-                      />
-                    </circle>
-                    {[...Array(12)].map((_, i) => {
-                      const angle = (i * 30 * Math.PI) / 180;
-                      const length = 15;
-                      return (
-                        <motion.line
-                          key={i}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.8 + i * 0.05, duration: 0.4 }}
-                          x1={220 + Math.cos(angle) * 25}
-                          y1={-20 + Math.sin(angle) * 25}
-                          x2={220 + Math.cos(angle) * (25 + length)}
-                          y2={-20 + Math.sin(angle) * (25 + length)}
-                          stroke="#4ade80"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          opacity="0.6"
-                        >
-                          <animate
-                            attributeName="strokeWidth"
-                            values="2;3;2"
-                            dur="3s"
-                            repeatCount="indefinite"
-                          />
-                        </motion.line>
-                      );
-                    })}
-                  </motion.g>
-                </g>
-              </svg>
+              </div>
             </div>
           </motion.div>
         </div>
 
-       
+        {/* Stats section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

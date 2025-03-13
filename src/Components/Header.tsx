@@ -83,12 +83,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center group cursor-pointer"
           >
-            <div className="relative w-12 h-12 transition-all duration-300 group-hover:scale-110">
-              <div className="w-full h-full bg-[#4ade80] rounded-full flex items-center justify-center text-[#004d36] text-xl font-bold">
-                A
-              </div>
-              <div className="absolute inset-0 bg-[#4ade80]/20 rounded-full filter blur-md group-hover:blur-xl transition-all duration-300 -z-10" />
-            </div>
+            
             <span className="text-4xl font-bold bg-gradient-to-r from-[#4ade80] to-green-300 bg-clip-text text-transparent ml-3 group-hover:scale-105 transition-all duration-300">
               AGRIBS
             </span>
